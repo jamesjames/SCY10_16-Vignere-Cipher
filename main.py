@@ -1,7 +1,6 @@
 import sys
 
 standardAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
-
 textFileObject = ''
 
 def cipher(inputText):
@@ -16,15 +15,15 @@ def cipher(inputText):
             textFileObject.write(str(char))
             sys.stdout.write(str(char))
 
-
-
 def decipher(inputText):
     sys.stdout.write("Deciphered Text: ")
     charList = list(inputText)
-    for char in charList:
+    print(charList)
+
+    for char in inputText:
         if char in standardAlphabet:
-            finalText = standardAlphabet[(standardAlphabet.index(char) + len(inputText)) % len(standardAlphabet)]
-            sys.stdout.write(str(finalText))
+            sys.stdout.write(str(standardAlphabet[(standardAlphabet.index(char) - len(inputText)) % len(standardAlphabet)]))
+
         else:
             sys.stdout.write(str(char))
 
@@ -41,5 +40,5 @@ if methodChoice == 'c':
 
 elif methodChoice == 'd':
     textFileObject = open('encryptedData.txt', 'r')
-    decipher(textFileObject)
+    decipher(str(textFileObject))
     textFileObject.close()
