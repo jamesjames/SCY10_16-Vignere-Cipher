@@ -1,3 +1,3 @@
-# SCY10_16-Vignere-Cipher
+# Year 10 Computing Engineering Cipher Assignemnt
 
-this is just a year 10 IB MYP computer engineering task pay no attention to it
+This is simply a grade 10 International Baccalaureate Middle Years Program computer engineering task; pay no attention to it.
